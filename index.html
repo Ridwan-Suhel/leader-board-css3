@@ -17,7 +17,7 @@
         <a class="logo d-flex" href="#"
           ><img src="images/logo.png" alt="Logo"
         /></a>
-        <nav>
+        <nav class="main-nav">
           <ul class="nav-list d-flex">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -30,6 +30,10 @@
             </div>
           </ul>
         </nav>
+        <div class="nav-bar">
+          <i class="fas fa-bars bar"></i>
+          <i class="fas fa-times cross"></i>
+        </div>
       </div>
     </header>
     <main>
@@ -258,5 +262,14 @@
         </div>
       </section>
     </main>
+
+    <script>
+      let navBtn = document.querySelector(".nav-bar");
+      let dropdown = document.querySelector(".main-nav ul");
+      navBtn.addEventListener("click", function () {
+        dropdown.classList.toggle("active");
+        this.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
